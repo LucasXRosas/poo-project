@@ -1,3 +1,14 @@
 {
-  "products": []
+  "products": [
+    {
+      "name": "God Of War",
+      "price": 90,
+      "type": "GAME"
+    },
+    {
+      "name": "Playstation",
+      "price": 490,
+      "type": "CONSOLE"
+    }
+  ]
 }

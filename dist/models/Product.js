@@ -9,7 +9,12 @@ class Product {
         return this.name;
     }
     setPrice(price) {
-        this.price = price;
+        if (typeof price === 'string') {
+            this.price = parseFloat(price);
+        }
+        else {
+            this.price = price;
+        }
     }
     getPrice() {
         return this.price;
@@ -19,6 +24,9 @@ class Product {
     }
     getType() {
         return this.type;
+    }
+    getDetails() {
+        return `${this.name} - $${this.price}`;
     }
 }
 exports.Product = Product;

@@ -6,4 +6,8 @@ export class Game extends Product {
     super();
     this.setType(ProductType.GAME);
   }
+
+  public getDetails(): string {
+    return `[Game] ${super.getDetails()}`;
+  }
 }

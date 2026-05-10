@@ -8,6 +8,9 @@ class Game extends Product_1.Product {
         super();
         this.setType(ProductType_1.ProductType.GAME);
     }
+    getDetails() {
+        return `[Game] ${super.getDetails()}`;
+    }
 }
 exports.Game = Game;
 //# sourceMappingURL=Game.js.map

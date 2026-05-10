@@ -18,7 +18,7 @@ export class FirstScreen {
     while (open) {
       console.log('\n=== MENU ===\n');
       const option = parseInt(
-        readlineSync.question('1. Add Game\n2. Add Console\n3. List Products\n4. Exit\nChoose: '),
+        readlineSync.question('1. Add Game\n2. Add Console\n3. List Products\n4. Exit\n\nChoose: '),
       );
 
       switch (option) {

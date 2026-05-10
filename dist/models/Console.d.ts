@@ -4,5 +4,6 @@ export declare class Console extends Product {
     getBrand(): string;
     setBrand(brand: string): void;
     constructor();
+    getDetails(): string;
 }
 //# sourceMappingURL=Console.d.ts.map

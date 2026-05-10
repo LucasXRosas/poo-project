@@ -14,6 +14,9 @@ class Console extends Product_1.Product {
         super();
         this.setType(ProductType_1.ProductType.CONSOLE);
     }
+    getDetails() {
+        return `[Console - ${this.brand}] ${super.getDetails()}`;
+    }
 }
 exports.Console = Console;
 //# sourceMappingURL=Console.js.map

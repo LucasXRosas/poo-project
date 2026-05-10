@@ -46,7 +46,7 @@ class FirstScreen {
         let open = true;
         while (open) {
             console.log('\n=== MENU ===\n');
-            const option = parseInt(readlineSync.question('1. Add Game\n2. Add Console\n3. List Products\n4. Exit\nChoose: '));
+            const option = parseInt(readlineSync.question('1. Add Game\n2. Add Console\n3. List Products\n4. Exit\n\nChoose: '));
             switch (option) {
                 case 1:
                     this.productRegister.registerGame();

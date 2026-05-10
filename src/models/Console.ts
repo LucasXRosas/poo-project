@@ -15,4 +15,8 @@ export class Console extends Product {
     super();
     this.setType(ProductType.CONSOLE);
   }
+
+  public getDetails(): string {
+    return `[Console - ${this.brand}] ${super.getDetails()}`;
+  }
 }
