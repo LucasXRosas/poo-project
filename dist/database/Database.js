@@ -50,6 +50,9 @@ class Database {
                 let prod = p.type === ProductType_1.ProductType.GAME ? new Game_1.Game() : new Console_1.Console();
                 prod.setName(p.name);
                 prod.setPrice(p.price);
+                if (prod instanceof Console_1.Console && p.brand) {
+                    prod.setBrand(p.brand);
+                }
                 return prod;
             });
         }
@@ -59,11 +62,17 @@ class Database {
         }
     }
     saveProducts(products) {
-        const DATA_TO_SAVE = products.map((p) => ({
-            name: p.getName(),
-            price: p.getPrice(),
-            type: p.getType(),
-        }));
+        const DATA_TO_SAVE = products.map((p) => {
+            let data = {
+                name: p.getName(),
+                price: p.getPrice(),
+                type: p.getType(),
+            };
+            if (p instanceof Console_1.Console) {
+                data.brand = p.getBrand();
+            }
+            return data;
+        });
         fs.writeFileSync(this.file, JSON.stringify({ products: DATA_TO_SAVE }, null, 2));
     }
 }

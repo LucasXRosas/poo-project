@@ -16,6 +16,9 @@ export class Database {
         let prod = p.type === ProductType.GAME ? new Game() : new Console();
         prod.setName(p.name);
         prod.setPrice(p.price);
+        if (prod instanceof Console && p.brand) {
+          prod.setBrand(p.brand);
+        }
         return prod;
       });
     } catch (error) {
@@ -25,11 +28,17 @@ export class Database {
   }
 
   public saveProducts(products: Product[]): void {
-    const DATA_TO_SAVE = products.map((p) => ({
-      name: p.getName(),
-      price: p.getPrice(),
-      type: p.getType(),
-    }));
+    const DATA_TO_SAVE = products.map((p) => {
+      let data: any = {
+        name: p.getName(),
+        price: p.getPrice(),
+        type: p.getType(),
+      };
+      if (p instanceof Console) {
+        data.brand = p.getBrand();
+      }
+      return data;
+    });
     fs.writeFileSync(this.file, JSON.stringify({ products: DATA_TO_SAVE }, null, 2));
   }
 }

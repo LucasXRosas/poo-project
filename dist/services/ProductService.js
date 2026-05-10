@@ -11,11 +11,11 @@ class ProductService {
         this.db.saveProducts(PRODUCTS);
     }
     getProductList() {
-        var _a, _b, _c;
+        var _a;
         const PRODUCTS = this.db.getProducts();
         let s = '=== REGISTERED PRODUCTS ===';
         for (let i = 0; i < PRODUCTS.length; i++) {
-            s += `\n[${(_a = PRODUCTS[i]) === null || _a === void 0 ? void 0 : _a.getType()}] ${(_b = PRODUCTS[i]) === null || _b === void 0 ? void 0 : _b.getName()} - $${(_c = PRODUCTS[i]) === null || _c === void 0 ? void 0 : _c.getPrice()}`;
+            s += `\n${(_a = PRODUCTS[i]) === null || _a === void 0 ? void 0 : _a.getDetails()}`;
         }
         if (PRODUCTS.length === 0)
             s += '\nNo products registered yet.';

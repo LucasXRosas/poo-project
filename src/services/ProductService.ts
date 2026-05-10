@@ -19,7 +19,7 @@ export class ProductService {
     const PRODUCTS = this.db.getProducts();
     let s: string = '=== REGISTERED PRODUCTS ===';
     for (let i = 0; i < PRODUCTS.length; i++) {
-      s += `\n[${PRODUCTS[i]?.getType()}] ${PRODUCTS[i]?.getName()} - $${PRODUCTS[i]?.getPrice()}`;
+      s += `\n${PRODUCTS[i]?.getDetails()}`;
     }
     if (PRODUCTS.length === 0) s += '\nNo products registered yet.';
     return s;
