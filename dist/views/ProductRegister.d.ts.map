@@ -1,0 +1,1 @@
+{"version":3,"file":"ProductRegister.d.ts","sourceRoot":"","sources":["../../src/views/ProductRegister.ts"],"names":[],"mappings":"AACA,OAAO,EAAE,cAAc,EAAE,MAAM,+BAA+B,CAAC;AAE/D,qBAAa,eAAe;IAC1B,OAAO,CAAC,UAAU,CAAiB;gBAEvB,UAAU,EAAE,cAAc;IAI/B,YAAY,IAAI,IAAI;IASpB,eAAe,IAAI,IAAI;IASvB,eAAe,IAAI,IAAI;CAO/B"}
