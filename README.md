@@ -1,5 +1,5 @@
 # poo-project
-projeto de Programação Orientada a Objetos
+Projeto de Programação Orientada a Objetos
 
 # Como usar:
 
