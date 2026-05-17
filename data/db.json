@@ -1,5 +1,10 @@
 {
   "products": [
-
+    {
+      "name": "Playstation 5",
+      "price": 490,
+      "type": "CONSOLE",
+      "brand": "Sony"
+    }
   ]
 }

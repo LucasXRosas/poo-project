@@ -1,6 +1,7 @@
 import { ProductType } from './ProductType';
+import { Printable } from './Printable';
 
-export abstract class Product {
+export abstract class Product implements Printable {
   protected name!: string;
   protected price!: number;
   protected type!: ProductType;
